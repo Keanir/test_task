@@ -1,0 +1,727 @@
+@charset "UTF-8";
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  min-height: 100%;
+  min-width: 768px;
+  position: relative;
+}
+
+a {
+  color: #000;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+:-moz-placeholder,
+::-moz-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.column_right {
+  margin: 20px 0 14px;
+  width: 1000px;
+  float: left;
+  position: relative;
+}
+
+.product__area {
+  display: table;
+  width: 100%;
+}
+
+.product {
+  width: 340px;
+  height: 545px;
+  border: 1px solid #e0e0e0;
+  margin: 10px 5px 0;
+  padding: 10px 10px 18px;
+  position: relative;
+  // float: left;
+
+  .btn_cart {
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    width: 148px;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+
+    .ic_cart {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.product_horizontal {
+  display: table;
+  float: none;
+  width: 99%;
+  height: 240px;
+
+  .product_photo {
+    float: left;
+    margin: 0;
+  }
+
+  .product_code {
+    position: absolute;
+    top: 11px;
+    left: 248px;
+  }
+
+  .product_description {
+    float: left;
+    padding: 28px 70px 0 19px;
+    width: 505px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.product_code {
+  font-size: 12px;
+  color: #666;
+}
+
+.product_status_tooltip_container {
+  float: right;
+  margin-top: 0;
+}
+
+.product_status {
+  cursor: pointer;
+  color: #093;
+  border-bottom: 1px dotted #093;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.product_photo {
+  position: relative;
+  margin: 10px 0 4px;
+  width: 220px;
+  height: 220px;
+  text-align: center;
+
+  a {
+    display: block;
+  }
+
+  img {
+    max-width: 160px;
+    max-height: 160px;
+  }
+}
+
+.product_description {
+  margin: 0;
+  display: block;
+  min-height: 90px;
+  font-weight: 700;
+  line-height: 18px;
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.product_tags {
+  float: left;
+  padding: 0 0 65px 20px;
+  width: 505px;
+  font-size: 16px;
+  line-height: 17px;
+
+  p {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 16px;
+    color: #545454;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  a,
+  span {
+    display: inline;
+    font-size: 13px;
+    line-height: 16px;
+    color: #666;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.product_units {
+  position: absolute;
+  right: 15px;
+  top: inherit;
+  bottom: 105px;
+  z-index: 9;
+
+  p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .unit--wrapper {
+    display: table;
+    width: 100%;
+  }
+
+  .unit--select {
+    float: left;
+    padding: 3px 5px;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+
+    &.unit--active {
+      background: #000;
+      cursor: default;
+
+      p {
+        color: #fff;
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+
+  .unit--select {
+    p {
+      font-size: 13px;
+      line-height: 13px;
+      color: #707070;
+      border-bottom: 1px dotted #707070;
+      transition: 0.2s;
+      -webkit-transition: 0.2s;
+    }
+
+    &::hover p {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+.product_price_club_card {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  position: absolute;
+  bottom: 76%;
+  right: 8px;
+
+  .product_price_club_card_text {
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-block;
+    text-align: right;
+    line-height: 17px;
+    margin-right: 16px;
+  }
+}
+
+.product_price_default {
+  color: #a7a7a7;
+  font-size: 25px;
+  margin: 0;
+  position: absolute;
+  bottom: 68%;
+  right: 8px;
+}
+
+.product_price_points {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 75px;
+  p {
+    font-size: 12px;
+    line-height: 17px;
+    color: #999;
+  }
+}
+
+.list--unit-desc {
+  position: absolute;
+  width: 222px;
+  right: 12px;
+  bottom: 85px;
+  margin: 10px 0 5px;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+
+  // Отрисовка рамки с уголком вокруг информации об упаковке
+  &::before {
+    margin-bottom: -1px;
+    border-color: #ccc;
+    color: #ccc;
+    left: 13px;
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+  }
+
+  &::after {
+    border-color: #fff !important;
+    left: 14px;
+    border-left: 7px solid transparent !important;
+    border-right: 7px solid transparent !important;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    border-top: 8px solid;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  .unit--desc-i {
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    margin: 8px 10px 0 0;
+    background: url(../img/product/unit--i.png) 50% no-repeat;
+    background-size: cover;
+  }
+
+  .unit--desc-t {
+    display: inline-block;
+
+    p {
+      font-size: 13px;
+      line-height: 15px;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.list--unit-padd {
+  display: table;
+  width: 1px;
+  height: 230px;
+}
+
+.btn {
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 25px;
+  font: 14px/40px Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.btn_cart {
+  background: #f90;
+  &:hover {
+    background: #333;
+  }
+}
+
+.stepper {
+  margin: 0 0 10px;
+  overflow: hidden;
+  position: relative;
+
+  .stepper-input {
+    border: none;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.2;
+    margin: 0;
+    overflow: hidden;
+    padding: 12px 8px 10px;
+    text-align: center;
+    width: 40px;
+    z-index: 49;
+    -moz-appearance: textfield;
+
+    &:focus {
+      background-color: #fff;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .stepper-arrow {
+    background: #fff url(../img/templates/jquery.fs.stepper-arrows.png)
+      no-repeat;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: block;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    text-indent: -99999px;
+    width: 25px;
+    z-index: 50;
+
+    &.up {
+      background-position: center top;
+      border-bottom: none;
+      border-top: none;
+      border-right: none;
+      top: 0;
+    }
+
+    &.down {
+      background-position: center bottom;
+      border-bottom: none;
+      border-right: none;
+      bottom: 0;
+    }
+  }
+}
+
+.ic {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background-image: url(../img/templates/el.png);
+  background-repeat: no-repeat;
+  background-position: 999999px 0;
+  transform: translate(0);
+  fill: #999;
+}
+
+.ic_cart {
+  width: 20px;
+  height: 20px;
+  background: none;
+  fill: #fff;
+}
+
+.product_count_wrapper {
+  line-height: 37px;
+  height: 40px;
+  width: 67px;
+  display: inline-block;
+  position: absolute;
+  bottom: 50px;
+  left: auto;
+  right: 164px;
+  border: 1px solid #ccc;
+  background: #fff;
+
+  .stepper-arrow.up {
+    background-position: -28px 0;
+
+    &:hover {
+      background-color: #666;
+      background-position: -1px 0;
+    }
+  }
+
+  .stepper-arrow.down {
+    background-position: -28px -20px;
+
+    &:hover {
+      background-color: #666;
+      background-position: -1px -20px;
+    }
+  }
+}
+
+.rouble__i {
+  width: 27px;
+  height: 20px;
+  svg#rouble__b,
+  svg#rouble__g {
+    width: 19px;
+    height: 19px;
+    vertical-align: inherit;
+  }
+
+  svg#rouble__b path {
+    fill: #000;
+  }
+  svg#rouble__g path {
+    fill: #a7a7a7;
+  }
+}
+
+.url--link {
+  cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 999px) {
+  .container {
+    width: 768px;
+  }
+  .sub_category_page {
+    .column_right_products_container {
+      float: left;
+      width: 500px;
+      margin-top: 0;
+    }
+  }
+  .product.product_horizontal {
+    .product_units {
+      position: absolute;
+      right: 15px;
+      top: inherit;
+      bottom: 95px;
+    }
+  }
+  .product_price_points {
+    display: none !important;
+  }
+  .list--unit-desc {
+    display: none;
+    width: 219px;
+    bottom: 95px;
+    right: 9px;
+  }
+  .product_horizontal {
+    display: block;
+    float: none;
+    width: 340px;
+    height: 545px;
+  }
+
+  .product_horizontal .btn_cart {
+    right: 10px;
+    bottom: 50px;
+  }
+
+  .product_horizontal .product_photo {
+    float: none;
+    margin: 10px 0 4px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .product_horizontal .product_code {
+    position: static;
+  }
+
+  .product_horizontal .product_description {
+    padding: 0;
+    width: auto;
+    font-size: 14px;
+    line-height: 20px;
+    float: none;
+  }
+
+  .product_horizontal .product_tags {
+    padding: 0;
+    width: auto;
+    font-size: 14px;
+    line-height: 22px;
+    float: none;
+  }
+
+  .product_horizontal .product_status_tooltip_container {
+    position: static;
+  }
+
+  .product_horizontal .product_price_club_card {
+    font-size: 28px;
+    bottom: 160px;
+    right: 8px;
+  }
+
+  .product_horizontal .product_price_default {
+    font-size: 26px;
+    bottom: 134px;
+    right: 8px;
+  }
+
+  .product_horizontal .rouble__i svg#rouble__b {
+    height: 21px;
+  }
+
+  .product_horizontal .rouble__i svg#rouble__g {
+    height: 20px;
+  }
+  .product_price_club_card_text {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1249px) {
+  .container {
+    width: 1000px;
+  }
+  .column_right {
+    width: 750px;
+  }
+  .product_description a {
+    position: relative;
+    top: 4px;
+  }
+  .product.product_horizontal {
+    .product_units {
+      position: absolute;
+      right: 12px;
+      top: 95px;
+      bottom: inherit;
+    }
+  }
+  .product_horizontal {
+    height: 200px;
+  }
+  .product_horizontal .btn_cart {
+    right: 13px;
+    bottom: 40px;
+  }
+  .product_horizontal .product_photo {
+    width: 160px;
+    height: 160px;
+  }
+  .product_horizontal .product_code {
+    top: 10px;
+    left: 180px;
+  }
+  .product_horizontal .product_description {
+    padding: 30px 20px 0 12px;
+    width: 330px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .product_horizontal .product_tags {
+    padding: 3px 0 65px 11px;
+    width: 330px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .product_horizontal .product_status_tooltip_container {
+    position: absolute;
+    top: 8px;
+    left: 280px;
+    font-size: 14px;
+  }
+  .product_horizontal .product_price_club_card {
+    top: 5px;
+    bottom: inherit;
+    right: 10px;
+  }
+  .product_horizontal .product_price_default {
+    top: 45px;
+    bottom: inherit;
+    right: 10px;
+  }
+  .product_horizontal .product_count_wrapper {
+    right: 167px;
+    bottom: 40px;
+  }
+  .product_price_club_card_text {
+    margin-right: 0;
+  }
+  .product_tags p {
+    font-size: 13px;
+  }
+
+  .product_tags a,
+  .product_tags span {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .container {
+    width: 1250px;
+  }
+  .product.product_horizontal {
+    .product_price_points {
+      top: 110px;
+    }
+    .product_units {
+      top: 130px;
+    }
+  }
+  .list--unit-desc {
+    bottom: 95px;
+    right: 10px;
+  }
+  .list--unit-padd {
+    height: 275px;
+  }
+}
