@@ -5,7 +5,7 @@ const createNode = element => document.createElement(element)
 const append = (parent, el) => parent.appendChild(el)
 
 // Асинхронно полуем данные из json файла
-fetch("https://keanir.github.io/test_task/products.json"")
+fetch("https://keanir.github.io/test_task/products.json")
   .then(function(response) {
     return response.json()
   })
